@@ -1,58 +1,32 @@
+@keyframes float{
+    from { transform: translateX(-10px); }
+    to { transform: translateX(10px); }
+}
 
-/*    @keyframes simpleAnimation{*/
-/*        from { opacity: 0; }*/
-/*        to { opacity: 1; }*/
-/*    }*/
+@keyframes rotate{
+    from { transform: rotate(-5deg); }
+    to { transform: rotate(5deg); }
+}
 
-
-
-/*@keyframes animatedBackground {*/
-/*    from { background-position: 0 0; }*/
-/*    to { background-position: 100% 0; } !* Moves the background horizontally *!*/
-/*}*/
-
-
-/*.profile-page {*/
-/*    position: relative;*/
-/*}*/
-
-/*.profile-page::before {*/
-/*    content: "";*/
-/*    z-index: 1;*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    height: 100%;*/
-/*    width: 100%;*/
-/*    background: url(https://myoshi.jinxxy-cdn.com/backgrounds/user_01kjccbja3fzz9239c01xks3wc/05a13521-cdbd-4034-94c0-84a46c2e63be.png);*/
-/*    background-position: 0px 0px;*/
-/*    animation: animatedBackground 2s linear infinite;*/
-/*}*/
-
-/*.container {*/
-/*    position: relative;*/
-/*    z-index: 2;*/
-/*}*/
-
-/*!**/
-/*.profile-custom-css {*/
-/*cursor: url("https://i.imgur.com/2OUSYLs.png") 0 0, auto;}*/
-/*.profile-page.profile-custom-css a {*/
-/*cursor: url("https://i.imgur.com/2OUSYLs.png") 0 0, auto;}*/
-/* *!*/
-
-.profile-top-bar {
-    display: none;
+.container{
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .card {
     border-radius: 5px;
     overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border: none;
 }
 
 .card-header {
-    background: #C61618;
-    border: none;
+    display: none !important;
+}
+
+.card-header::before {
+    display: none;
 }
 
 .card-body {
@@ -71,4 +45,245 @@
 
 a {
     color: #C61618;
+    cursor: pointer;
+}
+
+.profile-page {
+    background: transparent !important;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-top-bar {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border: none;
+}
+
+.profile-layout {
+    flex-direction: column;
+}
+
+.profile-left {
+    width: 100%;
+}
+
+.profile-url-box,
+.profile-tagline,
+.profile-main-card .card-header {
+    display: none;
+}
+
+.profile-main-card .card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+}
+
+.profile-avatar {
+    display: none !important;
+}
+
+.profile-display-name {
+    font-size: 0;
+    animation: rotate 2s ease-in-out alternate-reverse infinite;
+    grid-column: span 3;
+}
+
+.profile-display-name::before {
+    content: '';
+    display:block;
+    background-image: url("https://swolekat.info/images/logo.svg");
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile-mood {
+    grid-column: span 3;
+    background: #C61618;
+    border: none;
+}
+
+.profile-boop-stats,
+.mood-text {
+    color: #fff;
+}
+
+.profile-username {
+    font-size: 16px;
+    color: #C61618;
+    text-align: right;
+}
+
+.profile-oshi-mark {
+    text-align: left;
+}
+
+.profile-left > .card:nth-child(2),
+.profile-left > .card:nth-child(4),
+.profile-left > .card:nth-child(7) {
+    background: none;
+}
+
+.profile-left > .card:nth-child(2) .card-body,
+.profile-left > .card:nth-child(4) .card-body,
+.profile-left > .card:nth-child(7) .card-body {
+    padding: 0;
+}
+
+.friends-grid {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.friend-item {
+    position: relative;
+    aspect-ratio: 1 / 1;
+}
+
+.friend-avatar {
+    width: 100% !important;
+    height: 100% !important;
+    background: black;
+    border: none;
+}
+
+.friend-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    paint-order: stroke fill;
+    color: #fff;
+    -webkit-text-stroke: 3px #000;
+    font-size: 16px;
+}
+
+/* todo undo when you have pictures */
+.profile-left > .card:nth-child(3) {
+    display: none;
+}
+
+.profile-left > .card:nth-child(4) .card-body {
+    display: flex;
+    gap: 8px;
+}
+
+.profile-left > .card:nth-child(4) .card-body > div:first-child {
+    display: flex;
+}
+
+.profile-left > .card:nth-child(4) .card-body > div:first-child > a {
+    border: none !important;
+}
+
+.profile-left > .card:nth-child(4) .card-body > div:first-child > a > div:nth-child(2) {
+    background: #C61618;
+    color: #fff;
+}
+
+.profile-left > .card:nth-child(4) .card-body > div:first-child > a > div:nth-child(2) > div:nth-child(2) {
+    display: none;
+}
+
+.profile-left > .card:nth-child(4) .card-body > div:nth-child(2) {
+    display: flex;
+    aspect-ratio: 1 / 1;
+    background: #C61618;
+    color: #fff !important;
+    height: 158px;
+    width: 158px;
+    margin: 0 !important;
+}
+
+.profile-left > .card:nth-child(4) .card-body > div:nth-child(2) > a {
+    color: #fff !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*don't care about collabs*/
+.profile-left > .card:nth-child(5) {
+    display: none;
+}
+
+td {
+    color: #fff;
+}
+
+.profile-left > .card:nth-child(7) {
+    /*display: none;*/
+}
+
+.social-links-list {
+    flex-direction: row;
+}
+
+/*don't care about model info*/
+.profile-left > .card:nth-child(8) {
+    display: none;
+}
+
+.social-link-item {
+    background: transparent;
+    font-size: 0;
+    border: none;
+    padding: 0;
+    gap: 0;
+}
+
+.social-link-item::before {
+    content: '';
+    display: block;
+    height: 60px;
+    width: 60px;
+}
+
+
+.social-link-item[href*="x.com"]::before {
+    background: url(https://swolekat.info/images/socials/twitter.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-link-item[href*="twitch.tv"]::before {
+    background: url(https://swolekat.info/images/socials/twitch.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-link-item[href*="youtube"]::before {
+    background: url(https://swolekat.info/images/socials/youtube.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-link-item[href*="tiktok.com"]::before {
+    background: url(https://swolekat.info/images/socials/tiktok.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-link-item[href*="swolekat.info"]::before {
+    background: url(https://swolekat.info/images/socials/thingiverse.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-link-item[href*="bsky.app"]::before {
+    background: url(https://swolekat.info/images/socials/bluesky.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
