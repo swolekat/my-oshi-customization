@@ -1,7 +1,34 @@
-<a href="https://twitch.tv/swolekat" target="_blank" style="display:flex;justify-content:flex-start;text-decoration:none; margin-bottom: 16px;"><img src="https://freaktracker.luhsnaru.workers.dev/?user=swolekat" style="display:block;border:none;max-width:100%" alt="swolekat twitch status"></a>
 
-<img src="https://swolekat.info/schedule.png?test=true" style="display: block; max-width: 100%;">
-<p>*All schedules are in Central Time :3</p>
+
+<div class="about-content">
+    <div class="about-left">
+        <h1>
+            Hello!
+        </h1>
+
+        <p>
+            I'm swolekat! I'm a buff cat vtuber who plays a lot of retro games. You might know me from my various tutorials or streamer tech I've made in the past.
+        </p>
+        <p>
+            I'm currently working on a rebrand that will hopefully explain a bit more of what my streams are like so until then, please accept the previous bit as a brief introduction.
+        </p>
+        <p>
+            I'm hoping this site will be a fun distraction from other social media for a while. Hopefully I meet some cool new people :3
+        </p>
+    </div>
+    <div class="about-right">
+        <a href="https://twitch.tv/swolekat" target="_blank" style="display:flex;justify-content:flex-start;text-decoration:none; margin-bottom: 16px;"><img src="https://freaktracker.luhsnaru.workers.dev/?user=swolekat" style="display:block;border:none;max-width:100%" alt="swolekat twitch status"></a>
+
+        <img src="https://swolekat.info/schedule.png?test=true" style="display: block; max-width: 100%;">
+        <p>
+            <i>
+                *All schedules are in Central Time :3
+            </i>
+        </p>
+
+    </div>
+</div>
+
 
 <video autoplay="" loop="" muted="" class="video-background-special">
     <source src="https://swolekat.info/images/swolekat%20evangelion%20parody.webm" type="video/webm">
@@ -17,5 +44,32 @@
         width: 100%;
         object-fit: cover;
         z-index: -1;
+    }
+    .about-content {
+        display: flex;
+        color: #fff;
+        gap: 10px;
+    }
+
+    .about-content h1 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .about-left {
+        flex-grow: 1;
+    }
+
+    .about-right {
+        min-width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
     }
 </style>

@@ -223,6 +223,8 @@ td {
 
 .social-links-list {
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 /*don't care about model info*/
@@ -236,6 +238,10 @@ td {
     border: none;
     padding: 0;
     gap: 0;
+}
+
+.social-link-item:hover {
+    background: transparent;
 }
 
 .social-link-item::before {
@@ -275,7 +281,7 @@ td {
 }
 
 .social-link-item[href*="swolekat.info"]::before {
-    background: url(https://swolekat.info/images/socials/thingiverse.png);
+    background: url(https://swolekat.info/images/socials/website.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -286,4 +292,95 @@ td {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.section-links {
+    background: transparent;
+    border: none;
+}
+
+
+.interest-section span[data-lexical-text="true"] {
+    color: #fff;
+}
+
+.interest-section:nth-child(1) .emote-editor-paragraph,
+.interest-section:nth-child(2) .emote-editor-paragraph {
+    display: flex;
+    gap: 8px;
+}
+
+.interest-section:nth-child(1) .emote-editor-paragraph br,
+.interest-section:nth-child(2) .emote-editor-paragraph br {
+    display: none;
+}
+
+.interest-section:nth-child(1) span[data-lexical-text="true"],
+.interest-section:nth-child(2) span[data-lexical-text="true"] {
+    width: 200px;
+    height: 300px;
+    font-size: 0;
+}
+
+.interest-section:nth-child(1) span[data-lexical-text="true"]:nth-child(1) {
+    background-image: url("https://www.themoviedb.org/t/p/w1280/nqOsvzEamX7AyNwSx48OOV2iidE.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.interest-section:nth-child(1) span[data-lexical-text="true"]:nth-child(3) {
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_face/zt8aQ6ksqK6p1AopC5zVTDS9pKT.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.interest-section:nth-child(1) span[data-lexical-text="true"]:nth-child(5) {
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_face/aewan59WcFThBimkTVVoNf2o5Vb.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.interest-section:nth-child(1) span[data-lexical-text="true"]:nth-child(7) {
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_face/mP5FGQbNjFkrjcZ6AVHrvokPRe5.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.interest-section:nth-child(2) span[data-lexical-text="true"]:nth-child(1) {
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_face/lA9CNSdo50iQPZ8A2fyVpMvJZAf.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.interest-section:nth-child(2) span[data-lexical-text="true"]:nth-child(3) {
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_face/rTc7ZXdroqjkKivFPvCPX0Ru7uw.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.interest-section:nth-child(2) span[data-lexical-text="true"]:nth-child(5) {
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_face/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.interest-section:nth-child(2) span[data-lexical-text="true"]:nth-child(7) {
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_face/qpQR7rSfhHPIUYSDObPJf9LGZtV.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.interest-section:nth-child(2) span[data-lexical-text="true"]:nth-child(9) {
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_face/93Lm7iMKwAXEpYzBlFcSvXBvaCf.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.add-comment {
+    background: transparent;
 }
