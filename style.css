@@ -217,10 +217,6 @@ td {
     color: #fff;
 }
 
-.profile-left > .card:nth-child(7) {
-    /*display: none;*/
-}
-
 .social-links-list {
     flex-direction: row;
     align-items: center;
@@ -392,4 +388,8 @@ td {
 
 .emote-editor-paragraph {
     color: #fff;
+}
+
+.comment-content > *:nth-child(3) {
+    background: rgba(255, 255, 255, 0.1) !important;
 }
