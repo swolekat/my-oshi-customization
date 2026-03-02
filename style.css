@@ -384,3 +384,12 @@ td {
 .add-comment {
     background: transparent;
 }
+
+.profile-comment,
+.profile-comment:nth-child(2n) {
+    background: transparent;
+}
+
+.emote-editor-paragraph {
+    color: #fff;
+}
